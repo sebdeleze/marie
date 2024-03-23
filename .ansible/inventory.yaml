@@ -1,0 +1,20 @@
+all:
+  hosts:
+    prod:
+      project_url: https://mariedeleze.ch
+      ansible_host: x8099.ftp.infomaniak.com
+      ansistrano_deploy_to: ~/sites/mariedeleze.ch
+      ansistrano_git_identity_key_remote_path: ~/.ssh/id_ed25519
+  vars:
+    ansible_ssh_common_args: '-o IPQoS=throughput -o StrictHostKeyChecking=no'
+    ansistrano_deploy_from: "{{ playbook_dir }}/../"
+    ansistrano_deploy_via: git
+    ansistrano_keep_releases: 3
+    ansistrano_after_symlink_shared_tasks_file: "{{ playbook_dir }}/after-symlink.yaml"
+    ansistrano_rollback_after_symlink_tasks_file: "{{ playbook_dir }}/after-symlink.yaml"
+    ansistrano_after_update_code_tasks_file: "{{ playbook_dir }}/after-update-code.yaml"
+    ansistrano_git_repo: "git@github.com:sebdeleze/marie.git"
+    ansistrano_shared_files:
+      - ".env.local"
+    ansistrano_shared_paths:
+      - "var/log"

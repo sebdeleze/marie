@@ -1,0 +1,6 @@
+---
+- name: Deploy
+  hosts: all
+  gather_subset: "!facter"
+  roles:
+    - { role: ansistrano.deploy }

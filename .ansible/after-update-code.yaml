@@ -1,0 +1,7 @@
+---
+- name: Create var directory
+  file:
+    path: '{{ ansistrano_release_path.stdout }}/var'
+    state: directory
+  ignore_errors: true
+

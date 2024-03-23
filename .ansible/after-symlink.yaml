@@ -1,0 +1,25 @@
+---
+- name: Composer install
+  shell: composer install --no-dev --optimize-autoloader
+  args:
+    chdir: '{{ ansistrano_release_path.stdout }}'
+
+- name: Assets install
+  command: bin/console assets:install --symlink
+  args:
+    chdir: '{{ ansistrano_release_path.stdout }}'
+
+- name: Build Tailwind
+  command: bin/console tailwind:build
+  args:
+    chdir: '{{ ansistrano_release_path.stdout }}'
+
+- name: Compile assets map
+  command: bin/console asset-map:compile
+  args:
+    chdir: '{{ ansistrano_release_path.stdout }}'
+
+- name: Reset OPcache
+  shell: curl --insecure -X POST {{ project_url }}/opcache.php
+  args:
+    chdir: '{{ ansistrano_release_path.stdout }}'

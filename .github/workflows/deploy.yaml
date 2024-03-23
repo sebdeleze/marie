@@ -1,0 +1,26 @@
+name: Deployment
+
+on:
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: 'ubuntu-latest'
+        steps:
+            - name: Code checkout
+              uses: actions/checkout@v3
+
+            - name: Install roles
+              run: ansible-galaxy install ansistrano.deploy ansistrano.rollback
+
+            - name: Run playbook
+              uses: dawidd6/action-ansible-playbook@v2
+              with:
+                  playbook: .ansible/deploy.yaml
+                  options: |
+                      --inventory .ansible/inventory.yaml
+                      --limit prod
+                      --extra-vars ansible_user=${{ secrets.ssh_user }}
+                      --extra-vars ansible_password=${{ secrets.ssh_password }}
+                      --extra-vars ansistrano_git_branch=${{ github.ref_name }}
+                      --verbose
