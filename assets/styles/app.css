@@ -1,0 +1,18 @@
+@font-face {
+    src: url('../fonts/PoiretOne-Regular.ttf');
+    font-family: 'Poiret One';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary: rgb(76 92 164);
+        --color-secondary: rgb(255 115 179);
+    }
+}
