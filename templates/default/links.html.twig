@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {% block content_title %}Liens utiles{% endblock %}
+{% endblock %}
+
+{% block content %}
+    <p>Dans cette section, vous trouverez tous les liens utiles pour suivre ma saison et également pour m'aider dans la suite de ma carrière.</p>
+    <ul class="list-disc ml-4">
+        <li>
+            <a href="https://www.swiss-ski-kwo.ch/kwo/tk/index.php" target="_blank" class="text-primary">Calendrier des courses</a>
+        </li>
+        <li>
+            <a href="{{ asset('documents/dossier-parrainage.pdf') }}" target="_blank" class="text-primary">Dossier de parrainage</a>
+        </li>
+        <li>
+            <a href="{{ asset('documents/dossier-sponsoring.pdf') }}" target="_blank" class="text-primary">Dossier de sponsoring</a>
+        </li>
+        <li>
+            <a href="{{ asset('documents/dossier-sponsoring-materiel.pdf') }}" target="_blank" class="text-primary">Dossier de sponsoring matériel</a>
+        </li>
+    </ul>
+{% endblock %}
