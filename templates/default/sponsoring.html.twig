@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {% block content_title %}Sponsoring{% endblock %}
+{% endblock %}
+
+{% block content %}
+    <p><a href="{{ asset('documents/dossier-sponsoring.pdf') }}" target="_blank" class="text-primary">Télécharger le dossier (PDF)</a></p>
+    <div class="text-6xl font-heading text-center !my-8">Merci pour votre soutien !</div>
+    <img src="{{ asset('images/marie7.png') }}" alt="Slalom" class="content-image">
+{% endblock %}

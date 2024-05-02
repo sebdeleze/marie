@@ -17,28 +17,34 @@
     }
 
     dialog {
-        @apply block relative z-10;
+        @apply block overflow-hidden;
 
-        div.modal-backdrop {
-            @apply fixed inset-0 bg-gray-500 bg-opacity-75;
+        div.modal-container {
+            @apply block fixed z-50 left-0 right-0 bottom-0 bg-white text-left shadow-xl max-w-screen-lg mx-auto lg:rounded-lg h-[calc(100dvh-375px)] md:h-[calc(100dvh-275px)] translate-y-0 transition-transform duration-300 ease-in-out overflow-y-auto;
         }
 
-        div.modal-wrapper {
-            @apply fixed inset-0 z-10 w-screen overflow-y-auto;
-
+        &.modal-hidden {
             div.modal-container {
-                @apply flex min-h-full items-start justify-center p-4 md:items-center;
+            @apply translate-y-full;
+            }
+        }
 
-                div.modal-content {
-                    @apply relative overflow-hidden rounded-lg bg-white text-left shadow-xl w-full max-w-screen-lg;
+        a.modal-close {
+            @apply text-gray-400 absolute top-6 right-6 z-10;
+        }
 
-                    h1.modal-title {
-                        @apply grow text-3xl font-heading;
-                    }
+        div.modal-content {
+            @apply p-6;
 
-                    a.modal-close {
-                        @apply text-gray-400 bg-transparent w-8 h-8 ms-auto inline-flex justify-center items-center;
-                    }
+            h1.modal-title {
+                @apply grow text-4xl font-heading my-8;
+            }
+
+            div.modal-body {
+                @apply space-y-4;
+
+                img.content-image {
+                    @apply w-full md:w-1/2 mx-auto rounded shadow-xl;
                 }
             }
         }
@@ -48,21 +54,21 @@
         @apply flex flex-col items-center gap-4 h-screen bg-cover bg-no-repeat bg-center md:bg-bottom;
 
         header {
-            @apply mt-2 flex flex-col items-center gap-2 text-white text-3xl font-heading font-bold;
+            @apply mt-6 flex flex-col items-center gap-3 text-white text-3xl font-heading font-bold;
         }
 
         main {
-            @apply flex gap-2 justify-center font-heading;
+            @apply flex gap-2 justify-center font-heading tracking-wider;
 
             ul.links {
                 @apply flex max-md:flex-col gap-2;
 
-                li.link {
-                    @apply bg-white flex items-center rounded-full p-2 px-4 text-xs md:text-base font-bold uppercase hover:bg-primary hover:text-white border border-primary;
+                a.link {
+                    @apply bg-white flex items-center rounded p-2 px-4 text-xs md:text-base font-bold uppercase hover:bg-primary hover:text-white;
                 }
 
-                li.cta {
-                    @apply bg-primary text-white flex items-center rounded-full p-2 px-4 text-xs md:text-base font-bold uppercase;
+                a.cta {
+                    @apply bg-primary text-white flex items-center rounded p-2 px-4 text-xs md:text-base font-bold uppercase;
                 }
             }
         }
