@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {% block content_title %}Mes parrains{% endblock %}
+{% endblock %}
+
+{% block content %}
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <li class="border rounded-md p-2">Jean-Paul Storic</li>
+        <li class="border rounded-md p-2">Guillermo Santicoli</li>
+        <li class="border rounded-md p-2">Melvin Brückmüch</li>
+        <li class="border rounded-md p-2">Philippe Etienne Delacourdise</li>
+    </ul>
+    <div class="text-6xl font-heading text-center !my-8">Merci pour votre soutien !</div>
+    <img src="{{ asset('images/marie4.jpg') }}" alt="Slalom" class="content-image">
+{% endblock %}
