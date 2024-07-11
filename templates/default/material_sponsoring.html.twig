@@ -4,6 +4,8 @@
     {% block content_title %}Sponsoring matériel{% endblock %}
 {% endblock %}
 
+{% block closeLink %}{{ path('app_default_help') }}{% endblock %}
+
 {% block content %}
     <p>
         <a href="{{ asset('documents/dossier-sponsoring-materiel.pdf') }}" target="_blank" class="text-primary">Télécharger le dossier (PDF)</a>

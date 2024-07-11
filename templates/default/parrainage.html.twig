@@ -4,6 +4,8 @@
     {% block content_title %}Parrainage{% endblock %}
 {% endblock %}
 
+{% block closeLink %}{{ path('app_default_help') }}{% endblock %}
+
 {% block content %}
     <p><a href="{{ asset('documents/dossier-parrainage.pdf') }}" target="_blank" class="text-primary">Télécharger le dossier (PDF)</a></p>
     <p>Même la plus petite aide de votre part sera plus que précieuse!</p>

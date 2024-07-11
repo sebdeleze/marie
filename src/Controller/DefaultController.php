@@ -73,4 +73,16 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/links.html.twig');
     }
+
+    #[Route('/mes-videos', name: 'app_default_youtube')]
+    public function youtube(): Response
+    {
+        return $this->render('default/youtube.html.twig');
+    }
+
+    #[Route('/instagram', name: 'app_default_instagram')]
+    public function instagram(): Response
+    {
+        return $this->render('default/instagram.html.twig');
+    }
 }
