@@ -9,30 +9,30 @@
         Un grand merci à tous mes sponsors pour leur soutien!
     </p>
     <h2 class="font-heading text-3xl !mt-8">Entreprises</h2>
-    <div class="grid grid-cols-1 items-center gap-8 justify-center md:grid-cols-3">
-        <div class="col-span-4">
-            <a href="https://www.iomedia.ch" target="_blank">
-                <img src="{{ asset('images/sponsors/iomedia.svg') }}" alt="" class="w-96">
+    <div class="grid items-center gap-8 md:grid-cols-3">
+        <div class="flex justify-center md:col-span-3">
+            <a href="https://www.iomedia.ch" target="_blank" class="w-full md:w-3/5">
+                <img src="{{ asset('images/sponsors/iomedia.svg') }}" alt="" class="w-full">
             </a>
         </div>
-        <div>
-            <a href="https://latico.ch/" target="_blank">
+        <div class="flex justify-center">
+            <a href="https://latico.ch/" target="_blank" class="w-3/5 md:w-full">
                 <img src="{{ asset('images/sponsors/latico.png') }}" alt="" class="w-full">
             </a>
         </div>
-        <div>
-            <a href="https://lelabdesmontagnes.ch/" target="_blank">
-                <img src="{{ asset('images/sponsors/lelab.png') }}" alt="" class="w-full p-8">
+        <div class="flex justify-center">
+            <a href="https://lelabdesmontagnes.ch/" target="_blank" class="w-1/3 md:w-3/5">
+                <img src="{{ asset('images/sponsors/lelab.png') }}" alt="" class="w-full">
             </a>
         </div>
     </div>
     <h2 class="font-heading text-3xl !mt-12">Matériel</h2>
-    <div class="grid grid-cols-1 items-center gap-8 justify-center md:grid-cols-4">
-        <div class="m-auto">
-            <img src="{{ asset('images/atomic.jpg') }}" alt="" class="max-w-52">
+    <div class="grid grid-cols-1 items-center gap-8 justify-center md:grid-cols-3">
+        <div class="flex justify-center">
+            <img src="{{ asset('images/atomic.jpg') }}" alt="" class="w-2/5 md:w-full">
         </div>
-        <div class="m-auto">
-            <img src="{{ asset('images/leki.png') }}" alt="" class="max-w-52">
+        <div class="flex justify-center">
+            <img src="{{ asset('images/leki.png') }}" alt="" class="w-2/5 md:w-full">
         </div>
     </div>
 {% endblock %}
