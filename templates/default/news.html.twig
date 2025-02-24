@@ -7,6 +7,14 @@
 {% block content %}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="flex flex-col gap-2">
+            <h2 class="text-3xl font-heading">Mi-saison</h2>
+            <p>14/11/2024</p>
+            <video class="w-full aspect-video" controls>
+                <source src="{{ asset('mi-saison.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="flex flex-col gap-2">
             <h2 class="text-3xl font-heading">Entraînements Slalom Saas-Fee</h2>
             <p>14/11/2024</p>
             <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/knoxgFc7YsI" title="Saas-Fee / Slalom / Novembre 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
