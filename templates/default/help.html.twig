@@ -6,9 +6,17 @@
 
 {% block content %}
     <p>Le ski de compétition me procure des sensations extraordinaires et est un sport incroyable. Mais, à ce niveau, une saison coûte très cher.</p>
-    <p>Durant les années précédentes, j’ai pu compter sur un soutien sans faille de mon entourage, que ce soit en terme de temps ou financier. Mais là, cela devient difficile pour eux de subvenir à mes besoins.</p>
-    <p>Un soutien extérieur devient plus que nécessaire, pour que je puisse continuer dans cette voie, c’est pourquoi j’ai besoin de vous !</p>
-    <p>Que ce soit en terme de parrainage, sponsoring ou matériel, votre aide est primordiale.</p>
+    <p>Pour la saison à venir, il faudra compter sur un budget compris entre 30'000 et 40'000 CHF.</p>
+    <p>Ce budget comprend notamment les postes  suivants, parmi d’autres:</p>
+    <ul class="list-disc ml-4">
+        <li>Matériel (skis, chaussures, ...)</li>
+        <li>Frais d’hôtels et déplacements</li>
+        <li>Cotisation annuelle</li>
+        <li>Internat de Brig</li>
+        <li>Entretien des skis</li>
+    </ul>
+
+    <p>Votre soutien est donc plus que primordiale pour que je puisse poursuivre mon rêve dans les meilleures conditions!</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="border rounded p-6 space-y-2">
@@ -16,17 +24,7 @@
             <p><a href="{{ path('app_default_sponsoring') }}" class="text-primary" data-turbo-frame="content-frame">En savoir plus</a></p>
             <p><a href="{{ asset('documents/dossier-sponsoring.pdf') }}" target="_blank" class="text-primary">Télécharger le dossier (PDF)</a></p>
         </div>
-        <div class="border rounded p-6 space-y-2">
-            <h2 class="font-heading text-2xl mb-3">Sponsoring matériel</h2>
-            <p><a href="{{ path('app_default_material_sponsoring') }}" class="text-primary" data-turbo-frame="content-frame">En savoir plus</a></p>
-            <p><a href="{{ asset('documents/dossier-sponsoring-materiel.pdf') }}" target="_blank" class="text-primary">Télécharger le dossier (PDF)</a></p>
-        </div>
-        {# <div class="border rounded p-6 space-y-2">
-            <h2 class="font-heading text-2xl mb-3">Parrainage</h2>
-            <p><a href="{{ path('app_default_parrainage') }}" class="text-primary" data-turbo-frame="content-frame">En savoir plus</a></p>
-            <p><a href="{{ asset('documents/dossier-parrainage.pdf') }}" target="_blank" class="text-primary">Télécharger le dossier (PDF)</a></p>
-        </div> #}
     </div>
     <div class="text-6xl font-heading text-center !my-8">Merci pour votre soutien !</div>
-    <img src="{{ asset('images/marie2.jpg') }}" alt="Slalom" class="content-image">
+    <img src="{{ asset('images/marie12.jpg') }}" alt="Géant" class="content-image">
 {% endblock %}
