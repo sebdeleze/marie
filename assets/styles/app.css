@@ -51,7 +51,7 @@
     }
 
     div.app-container {
-        @apply flex flex-col items-center gap-4 h-screen bg-cover bg-no-repeat bg-center md:bg-bottom;
+        @apply flex flex-col items-center gap-4 h-screen bg-cover bg-no-repeat bg-center;
 
         header {
             @apply mt-6 flex flex-col items-center gap-3 text-white text-3xl font-heading font-bold;
