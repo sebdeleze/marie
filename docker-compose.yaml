@@ -1,0 +1,43 @@
+services:
+  php:
+    user: "1000:1000"
+    build: .docker/php
+    expose:
+      - 9001 # xdebug port
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    environment:
+      - PHP_IDE_CONFIG=serverName=docker
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+      - MYSQL_HOST
+      - MYSQL_DATABASE
+      - MYSQL_PORT
+      - MYSQL_ROOT_PASSWORD
+    volumes:
+      - ./:/var/www
+    networks:
+      - default
+
+  http:
+    image: hub.iomedia.ch/apache_24_flex
+    depends_on:
+      - php
+    expose:
+      - 80 # http port
+      - 443 # https port
+    volumes:
+      - ./:/var/www:rw,cached
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app_${PROJECT_NAME}.rule=Host(`app.${PROJECT_NAME}.localhost`)"
+      - "traefik.http.routers.app_${PROJECT_NAME}.entrypoints=https"
+      - "traefik.http.routers.app_${PROJECT_NAME}.tls=true"
+      - "traefik.http.services.app_${PROJECT_NAME}.loadbalancer.server.port=80"
+    networks:
+      - traefik
+      - default
+
+networks:
+  traefik:
+    external: true
