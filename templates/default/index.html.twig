@@ -4,7 +4,9 @@
 
 {% block main_content %}
     <div class="mx-auto max-w-6xl flex flex-col gap-8">
-        <section id="presentation" class="rounded-3xl bg-white/60 shadow-2xl backdrop-blur-md p-6 md:p-12 flex flex-col gap-4">
+        <img src="{{ asset('images/marie14.jpg') }}" alt="" class="rounded-3xl">
+
+        <section id="presentation" class="rounded-3xl bg-white shadow-2xl backdrop-blur-md p-6 md:p-12 flex flex-col gap-4">
             <h2 class="font-heading text-5xl leading-none">A propos de moi</h2>
             <div class="flex flex-col gap-4">
                 <p>Je m'appelle Marie Délèze, j'ai 17 ans et je suis une passionnée de ski alpin. Je viens de Nendaz, dans le magnifique canton du Valais en Suisse. Depuis mon plus jeune âge, j'ai été attirée par les montagnes enneigées et les pistes de ski.</p>
@@ -13,7 +15,7 @@
             </div>
         </section>
 
-        <section id="sponsors" class="rounded-3xl bg-white/60 shadow-2xl backdrop-blur-md p-6 md:p-12 flex flex-col gap-4">
+        <section id="sponsors" class="rounded-3xl bg-white shadow-2xl backdrop-blur-md p-6 md:p-12 flex flex-col gap-4">
             <h2 class="font-heading text-5xl leading-none">Sponsoring</h2>
             <div class="text-xl">Un grand merci à tous mes sponsors et partenaires pour leur aide précieuse et leur soutien.</div>
             <div class="grid gap-4 lg:grid-cols-3">
@@ -31,7 +33,7 @@
             </div>
         </section>
 
-        <section id="soutien" class="rounded-3xl bg-white/60 shadow-2xl backdrop-blur-md p-6 md:p-12 flex flex-col gap-4">
+        <section id="soutien" class="rounded-3xl bg-white shadow-2xl backdrop-blur-md p-6 md:p-12 flex flex-col gap-4">
             <h2 class="font-heading text-5xl leading-none">J'ai besoin de vous</h2>
             <div class="flex flex-col gap-4">
                 <p>Le ski de compétition me procure des sensations extraordinaires et est un sport incroyable. Mais, à ce niveau, une saison coûte très cher.</p>
@@ -51,5 +53,14 @@
             </div>
             <div class="text-5xl text-center">Merci pour votre aide !</div>
         </section>
+
+        <div class="grid gap-8 md:grid-cols-2">
+            <div>
+                <iframe class="aspect-video rounded-3xl" src="https://www.youtube.com/embed/0LlD1LGkHEs" title="Slalom Arolla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div>
+                <iframe class="aspect-video rounded-3xl" src="https://www.youtube.com/embed/pfL6QcKZvUc" title="Géant Thyon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 {% endblock %}
